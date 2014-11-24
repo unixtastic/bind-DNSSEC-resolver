@@ -6,14 +6,17 @@ A minimal BIND based DNSSEC resolver for docker.
 Build instructions:
 ===================
 
-git clone https://github.com/unixtastic/bind-DNSSEC-resolver
+These instructions are to rebuild this image. Normally you would just follow
+the usage instuctions below to run the image built by docker hub.
 
-docker build -t 'unixtastic/bind-DNSSEC-resolver' .
+git clone https://github.com/unixtastic/bind-DNSSEC-resolver
+docker build -t 'unixtastic/bind-dnssec-resolver' .
 
 Usage instructions:
 ===================
 
-docker run -d -p 53:53/udp -p 53:53 unixtastic/bind-DNSSEC-resolver
+To download, install, and run the container as built by docker hub enter the following line:
+docker run -d -p 53:53/udp -p 53:53 unixtastic/bind-dnssec-resolver
 
 It is recommended to forward port 53 on both UDP and TCP as large replies
 may failover to TDP.
