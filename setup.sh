@@ -8,7 +8,7 @@ wget -q -O bind-9.9.8-P3.tar.gz ftp://ftp.isc.org/isc/bind9/9.9.8-P3/bind-9.9.8-
 tar -xzf bind-9.9.8-P3.tar.gz
 cd /tmp/bind-9.9.8-P3
 ./configure --with-openssl --disable-linux-caps
-make
+make -j4
 groupadd bind
 useradd -g bind -d /tmp -M -r -s /bin/false bind
 make install
